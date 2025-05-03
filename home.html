@@ -3,15 +3,26 @@
     <head>
         <title>Class Activities - Home</title>
         <link rel="stylesheet" href="style.css">
-        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="home.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="audio.js"></script>
+        <script src="home.js"></script>
     </head>
-    <body onload="loadData('home')" class="centered" id="body">
-        <h1 id="title">Class Activities - Christian Sorensen</h1>
-        <nav id="header">
-            <button onclick="window.location.href='stocks.html'" class="stylish-button">Stocks</button>
-            <button onclick="window.location.href='dogs.html'" class="stylish-button">Dogs</button>
-        </nav>
+    <body onload="loadData()" class="centered" id="body">
+        <div id="header">
+            <h1 id="title">Class Activities - Christian Sorensen</h1>
+            <nav>
+                <ul id="navigationList">
+                    <li><a class="navLink" href="home.html">Home</a></li>
+                    <li><a class="navLink" href="stocks.html">Stocks</a></li>
+                    <li><a class="navLink" href="dogs.html">Dogs</a></li>
+                </ul>
+            </nav>
+            <div id="headerButtons">
+                <button onclick="window.location.href='stocks.html'" class="stylish-button">Stocks</button>
+                <button onclick="window.location.href='dogs.html'" class="stylish-button">Dogs</button>
+            </div>
+        </div>
         <div class="centered">
             <div id="quoteBox" class="centered">
                 <h2>Inspirational Quote</h2>

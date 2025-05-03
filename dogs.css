@@ -1,0 +1,59 @@
+
+#breedButtons {
+    width: 75%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+#breedButtons > button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#facts {
+    margin-top: 40px;
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border: solid;
+    justify-self: center;
+
+}
+
+.roundButton {
+    background-color: #ffdeda;
+    border: 2px solid #111;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .roundButton:hover {
+    background-color: #fff;
+  }
+  
+  .roundButton:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 768px) {
+    .roundButton {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }

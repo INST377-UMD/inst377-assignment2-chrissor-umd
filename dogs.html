@@ -3,15 +3,32 @@
     <head>
         <title>Class Activities - Home</title>
         <link rel="stylesheet" href="style.css">
-        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="dogs.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        <script src="audio.js"></script>
+        <script src="dogs.js"></script>
     </head>
-    <body onload="loadData('stocks')" class="centered" id="body">
-        <h1 id="title">Class Activities - Christian Sorensen</h1>
-        <nav id="header">
-            <button onclick="window.location.href='home.html'" class="stylish-button">Home</button>
-            <button onclick="window.location.href='stocks.html'" class="stylish-button">Stocks</button>
-        </nav>
+    <body onload="loadData()" class="centered" id="body">
+        <div id="header">
+            <h1 id="title">Class Activities - Christian Sorensen</h1>
+            <nav>
+                <ul id="navigationList">
+                    <li><a class="navLink" href="home.html">Home</a></li>
+                    <li><a class="navLink" href="stocks.html">Stocks</a></li>
+                    <li><a class="navLink" href="dogs.html">Dogs</a></li>
+                </ul>
+            </nav>
+            <div id="headerButtons">
+                <button onclick="window.location.href='home.html'" class="stylish-button">Home</button>
+                <button onclick="window.location.href='stocks.html'" class="stylish-button">Stocks</button>
+            </div>
+        </div>
+        <h1 class="centeredText">Doggies! &#128054</h1>
+        <div id="dogSlides" style="width:612px; height:612px" class="centered" data-simple-slider></div>
+        <div id="breeds">
+            <div id="breedButtons"></div>
+        </div>
         <div id="audio" class="centered"></div>
     </body>
 </html>

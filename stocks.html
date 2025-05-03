@@ -3,16 +3,27 @@
     <head>
         <title>Class Activities - Home</title>
         <link rel="stylesheet" href="style.css">
-        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="stocks.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="audio.js"></script>
+        <script src="stocks.js"></script>
     </head>
-    <body onload="loadData('stocks')" class="centered" id="body">
-        <h1 id="title">Class Activities - Christian Sorensen</h1>
-        <nav id="header">
-            <button onclick="window.location.href='home.html'" class="stylish-button">Home</button>
-            <button onclick="window.location.href='dogs.html'" class="stylish-button">Dogs</button>
-        </nav>
+    <body onload="loadData()" class="centered" id="body">
+        <div id="header">
+            <h1 id="title">Class Activities - Christian Sorensen</h1>
+            <nav>
+                <ul id="navigationList">
+                    <li><a class="navLink" href="home.html">Home</a></li>
+                    <li><a class="navLink" href="stocks.html">Stocks</a></li>
+                    <li><a class="navLink" href="dogs.html">Dogs</a></li>
+                </ul>
+            </nav>
+            <div id="headerButtons">
+                <button onclick="window.location.href='home.html'" class="stylish-button">Home</button>
+                <button onclick="window.location.href='dogs.html'" class="stylish-button">Dogs</button>
+            </div>
+        </div>
         <div id="stocksDiv">
             <form id="stocksForm" class="centered">
                 <div id="row1" class="centered">
@@ -25,7 +36,7 @@
                     </select>
                 </div>
                 <div id="row2">
-                    <button id="submitStocks" type="submit">Load</button>
+                    <button class="roundButton" type="submit">Load</button>
                 </div>
             </form>
             <div id="chartDiv" class="centered"></div>
