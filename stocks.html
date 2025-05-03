@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Activities - Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stocks.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="audio.js"></script>
+        <script src="stocks.js"></script>
+    </head>
+    <body onload="loadData()" class="centered" id="body">
+        <div id="header">
+            <h1 id="title">Class Activities - Christian Sorensen</h1>
+            <nav>
+                <ul id="navigationList">
+                    <li><a class="navLink" href="home.html">Home</a></li>
+                    <li><a class="navLink" href="stocks.html">Stocks</a></li>
+                    <li><a class="navLink" href="dogs.html">Dogs</a></li>
+                </ul>
+            </nav>
+            <div id="headerButtons">
+                <button onclick="window.location.href='home.html'" class="stylish-button">Home</button>
+                <button onclick="window.location.href='dogs.html'" class="stylish-button">Dogs</button>
+            </div>
+        </div>
+        <div id="stocksDiv">
+            <form id="stocksForm" class="centered">
+                <div id="row1" class="centered">
+                    <label name="stockLabel" for="ticker">Choose Stock:</label>
+                    <input type="text" name="ticker" id="ticker" maxlength="5" required><br>
+                    <select name="dateRange" id="dateRange">
+                        <option value="30">30 Days</option>
+                        <option value="60">60 Days</option>
+                        <option value="90">90 Days</option>
+                    </select>
+                </div>
+                <div id="row2">
+                    <button class="roundButton" type="submit">Load</button>
+                </div>
+            </form>
+            <div id="chartDiv" class="centered"></div>
+            <h2 class="centeredText"><b>Top 5 Stocks:</b></h2>
+            <table id="stocksTable" class="centered">
+                <thead>
+                    <tr id="headerRow">
+                        <th scope="col">Ticker</th>
+                        <th scope="col"># Comments</th>
+                        <th scope="col" class="sentiment">Sentiment</th>
+                    </tr>
+                </thead>
+                <tbody id="topStocks">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="audio" class="centered"></div>
+    </body>
+</html>
