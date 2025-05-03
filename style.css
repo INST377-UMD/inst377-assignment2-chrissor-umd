@@ -16,7 +16,7 @@ nav {
 }
 
 
-#quote-box {
+#quoteBox {
     display: grid;
     border-style: solid;
     width: 50%;
@@ -26,15 +26,20 @@ nav {
     background-color: rgb(244, 212, 167);
 }
 
-#quote-box > * {
+#quoteBox > * {
     margin: auto;
     padding: 5px;
 }
 
 .centered {
-    justify-content: center;
+    justify-self: center;
     margin: auto;
 }
+
+.centeredText {
+    text-align: center;
+}
+
 
 #audio {
     border-style: solid;
@@ -42,7 +47,7 @@ nav {
     border-width: 2px;
     border-radius: 4px;
     width: 50%;
-    margin-top: 15px;
+    margin-top: 40px;
     padding: 20px;
     background-color: rgb(44, 155, 44);
     color: white;
@@ -53,9 +58,57 @@ nav {
     justify-content: space-evenly;
 }
 
+#row1 {
+    display: flex;
+    justify-content: center;
+}
 
+#row1 > * {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
+#row2 {
+    justify-items: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
+#chartDiv {
+    width: 75%;
+    justify-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#stocksTable {
+    width: 40%;
+    border-collapse: collapse;
+}
+
+#stocksTable,
+#headerRow,
+#headerRow > th,
+#topStocks > tr > * {
+    border: solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(176, 205, 231);
+    margin: 3px;
+}
+
+#topStocks > * {
+    text-align: center;
+    margin: 10px;
+}
+
+.stocksIcon {
+    width: 25%;
+    height: auto;
+}
 
 
 .stylish-button {
@@ -143,5 +196,40 @@ nav {
 @media (min-width: 768px) {
   .audio-button {
     padding: 0.25em 0.75em;
+  }
+}
+
+#submitStocks {
+  background-color: #ffdeda;
+  border: 2px solid #111;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#submitStocks:hover {
+  background-color: #fff;
+}
+
+#submitStocks:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #submitStocks {
+    min-width: 120px;
+    padding: 0 25px;
   }
 }
